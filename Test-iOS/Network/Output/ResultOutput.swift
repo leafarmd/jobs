@@ -10,8 +10,8 @@ struct EventsOutput: Decodable {
     let id: String
     let title: String
     let price: Double
-    var latitude: LocationOutput
-    var longitude: LocationOutput
+    let latitude: LocationOutput?
+    let longitude: LocationOutput?
     let image: String
     let description: String
     let date: Int
@@ -23,7 +23,7 @@ enum  LocationOutput: Decodable {
     case double(Double)
     case string(String)
     
-    var value: Double {
+    var value: Double? {
         switch self {
         case .double(let value):
             return value
@@ -31,8 +31,7 @@ enum  LocationOutput: Decodable {
             if let value = Double(value) {
                 return value
             }
-            return 0
-            
+            return nil
         }
     }
     
@@ -46,7 +45,7 @@ enum  LocationOutput: Decodable {
             self = .string(value)
             return
         }
-        throw DecodingError.typeMismatch(LocationOutput.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for IntOrString"))
+        throw DecodingError.typeMismatch(LocationOutput.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for LocationOutput"))
     }
 }
 
