@@ -19,25 +19,22 @@ struct EventsOutput: Decodable {
     let people: [PeopleOutput]
 }
 
-fileprivate extension Double {
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        
-        if let value = try? container.decode(Double.self) {
-            self = value
-        }
-        if let value = try? container.decode(String.self) {
-            if let value = Double(value) {
-                self = value
-            }
-        }
-        throw DecodingError.typeMismatch(LocationOutput.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for IntOrString"))
-    }
-}
-
 enum  LocationOutput: Decodable {
     case double(Double)
     case string(String)
+    
+    var value: Double {
+        switch self {
+        case .double(let value):
+            return value
+        case .string(let value):
+            if let value = Double(value) {
+                return value
+            }
+            return 0
+            
+        }
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
