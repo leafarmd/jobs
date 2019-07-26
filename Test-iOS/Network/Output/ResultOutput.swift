@@ -6,7 +6,7 @@
 //  Copyright © 2019 Rafael Damasceno. All rights reserved.
 //
 
-struct ResultOutputElement: Decodable {
+struct EventsOutput: Decodable {
     let id: String
     let title: String
     let price: Double
