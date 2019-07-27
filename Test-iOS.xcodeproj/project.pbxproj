@@ -21,6 +21,8 @@
 		53B4F2B022EC42410028B29F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2AE22EC42410028B29F /* TableViewController.swift */; };
 		53B4F2B122EC42410028B29F /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F2AF22EC42410028B29F /* TableViewController.xib */; };
 		53B4F2B622EC4C500028B29F /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2B422EC4C500028B29F /* TestCell.swift */; };
+		53B4F2C922ECA55B0028B29F /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2C822ECA55B0028B29F /* LoadingHandler.swift */; };
+		53B4F2CE22ECABA60028B29F /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2CD22ECABA60028B29F /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		53B4F2AE22EC42410028B29F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		53B4F2AF22EC42410028B29F /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		53B4F2B422EC4C500028B29F /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		53B4F2C822ECA55B0028B29F /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
+		53B4F2CD22ECABA60028B29F /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +97,13 @@
 		53A2085022EB636E00878F68 /* Test-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				53B4F2A522EC3D720028B29F /* GenericTableView */,
-				53B4F29922EB652A0028B29F /* Network */,
 				53A2085122EB636E00878F68 /* AppDelegate.swift */,
-				53A2085822EB636F00878F68 /* Assets.xcassets */,
-				53A2085A22EB636F00878F68 /* LaunchScreen.storyboard */,
 				53A2085D22EB636F00878F68 /* Info.plist */,
+				53B4F2CC22ECAB8A0028B29F /* Extensions */,
+				53B4F2A522EC3D720028B29F /* GenericTableView */,
+				53B4F2CA22ECA68D0028B29F /* Handlers */,
+				53B4F29922EB652A0028B29F /* Network */,
+				53B4F2CB22ECAB7D0028B29F /* Resources */,
 			);
 			path = "Test-iOS";
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		53B4F29922EB652A0028B29F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				53B4F2CF22ECAC510028B29F /* Core */,
 				53B4F29A22EB65AA0028B29F /* Output */,
 			);
 			path = Network;
@@ -124,9 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				53B4F29B22EB65C50028B29F /* ResultOutput.swift */,
-				53B4F29D22EB66D10028B29F /* APIEndpoint.swift */,
-				53B4F29F22EB6A450028B29F /* APISupportTypes.swift */,
-				53B4F2A122EB6AC00028B29F /* API.swift */,
 			);
 			path = Output;
 			sourceTree = "<group>";
@@ -142,6 +145,41 @@
 				53B4F2B422EC4C500028B29F /* TestCell.swift */,
 			);
 			path = GenericTableView;
+			sourceTree = "<group>";
+		};
+		53B4F2CA22ECA68D0028B29F /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				53B4F2C822ECA55B0028B29F /* LoadingHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		53B4F2CB22ECAB7D0028B29F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53A2085822EB636F00878F68 /* Assets.xcassets */,
+				53A2085A22EB636F00878F68 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		53B4F2CC22ECAB8A0028B29F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53B4F2CD22ECABA60028B29F /* DateExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53B4F2CF22ECAC510028B29F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				53B4F29D22EB66D10028B29F /* APIEndpoint.swift */,
+				53B4F29F22EB6A450028B29F /* APISupportTypes.swift */,
+				53B4F2A122EB6AC00028B29F /* API.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +288,10 @@
 				53B4F29C22EB65C50028B29F /* ResultOutput.swift in Sources */,
 				53B4F2B022EC42410028B29F /* TableViewController.swift in Sources */,
 				53B4F2A722EC3DCF0028B29F /* TableViewDataSoruce.swift in Sources */,
+				53B4F2CE22ECABA60028B29F /* DateExtensions.swift in Sources */,
 				53A2085222EB636E00878F68 /* AppDelegate.swift in Sources */,
 				53B4F2A222EB6AC00028B29F /* API.swift in Sources */,
+				53B4F2C922ECA55B0028B29F /* LoadingHandler.swift in Sources */,
 				53B4F2A922EC3E010028B29F /* TableViewModel.swift in Sources */,
 				53B4F2A422EC3D5F0028B29F /* CellConfigurator.swift in Sources */,
 				53B4F29E22EB66D10028B29F /* APIEndpoint.swift in Sources */,

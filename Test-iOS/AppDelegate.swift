@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func makeViewController() {
-        navigator.isNavigationBarHidden = true
         
         let string = "this is a generic tableview test"
         let items: [CellConfigurator] = [ TestCellConfig(item: string)]
