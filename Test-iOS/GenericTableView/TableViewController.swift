@@ -27,8 +27,13 @@ class TableViewController: UIViewController {
         setupTableView()
         
         dataSoruce.model.items.forEach {
-            tableView.register(type(of: $0).nib, forCellReuseIdentifier: type(of: $0).reuseId)
-            tableView.register(type(of: $0).cell, forCellReuseIdentifier: type(of: $0).reuseId)
+            
+            if Bundle.main.path(forResource: type(of: $0).reuseId, ofType: "nib") != nil {
+                tableView.register(type(of: $0).nib, forCellReuseIdentifier: type(of: $0).reuseId)
+            } else {
+                tableView.register(type(of: $0).cell, forCellReuseIdentifier: type(of: $0).reuseId)
+            }
+            
         }
     }
     

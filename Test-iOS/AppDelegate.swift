@@ -26,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigator.isNavigationBarHidden = true
         
         let string = "this is a generic tableview test"
-        let string2 = "this is a generic tableview test"
-        let items = [TestCellConfig(item: string), TestCellConfig(item: string2)]
+        let items: [CellConfigurator] = [ TestCellConfig(item: string)]
         let model = TableViewModel(items: items)
         let dataSource = TableViewDataSoruce(model: model)
         let viewController = TableViewController(dataSoruce: dataSource)
