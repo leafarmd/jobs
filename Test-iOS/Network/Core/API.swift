@@ -73,18 +73,21 @@ final class API {
             completion(.failure(.invalidData))
             return
         }
-        DispatchQueue.global().async {
-            do {
-                let data = try Data(contentsOf: url)
-                guard let image = UIImage(data: data) else {
-                    completion(.failure(.invalidData))
-                    return
-                }
-                
+        
+        do {
+            let data = try Data(contentsOf: url)
+            guard let image = UIImage(data: data) else {
                 DispatchQueue.main.async {
-                    completion(.success(image))
+                    completion(.failure(.invalidData))
                 }
-            } catch {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                completion(.success(image))
+            }
+        } catch {
+            DispatchQueue.main.async {
                 completion(.failure(.invalidData))
             }
         }

@@ -9,8 +9,10 @@
 import Foundation
 
 struct EventModel {
+    let id: String
     let title: String
     let Description: String
     let date: Date
     let price: Double
+    let image: String
 }

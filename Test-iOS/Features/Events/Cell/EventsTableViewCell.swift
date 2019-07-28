@@ -11,8 +11,14 @@ import UIKit
 typealias EventsCellConfig = TableCellConfigurator<EventsTableViewCell, EventModel>
 
 class EventsTableViewCell: UITableViewCell, ConfigurableCell {
+    @IBOutlet weak var imageViewEvent: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
+    
     
     func configure(data: EventModel) {
-        textLabel?.text = data.title
+        imageViewEvent.loadImageFromURL(data.image)
+        labelTitle.text = data.title
+        labelDate.text = data.date.fromFormat("MMM, dd yyyy")
     }
 }
