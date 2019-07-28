@@ -24,11 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func makeViewController() {
         
-        let string = "this is a generic tableview test"
-        let items: [CellConfigurator] = [ TestCellConfig(item: string)]
-        let model = TableViewModel(items: items)
-        let dataSource = TableViewDataSoruce(model: model)
-        let viewController = TableViewController(dataSoruce: dataSource)
+//        let string = "this is a generic tableview test"
+//        let items: [CellConfigurator] = [ TestCellConfig(item: string)]
+//        let model = TableViewModel(items: items)
+//        let dataSource = TableViewDataSoruce(model: model)
+//        let viewController = TableViewController(dataSoruce: dataSource)
+        
+        let router = EventsRouter()
+        let viewController = router.makeViewController()
         
         window.rootViewController = navigator
         window.makeKeyAndVisible()

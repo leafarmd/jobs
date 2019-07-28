@@ -12,8 +12,9 @@ class TableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private let dataSoruce: TableViewDataSoruce
-    init(dataSoruce: TableViewDataSoruce) {
+    let dataSoruce: TableViewDataSoruce
+    
+    init(dataSoruce: TableViewDataSoruce, nibName: String = "TableViewController") {
         self.dataSoruce = dataSoruce
         
         super.init(nibName: "TableViewController", bundle: nil)
@@ -24,17 +25,8 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
         
-        dataSoruce.model.items.forEach {
-            
-            if Bundle.main.path(forResource: type(of: $0).reuseId, ofType: "nib") != nil {
-                tableView.register(type(of: $0).nib, forCellReuseIdentifier: type(of: $0).reuseId)
-            } else {
-                tableView.register(type(of: $0).cell, forCellReuseIdentifier: type(of: $0).reuseId)
-            }
-            
-        }
+        setupTableView()
     }
     
     private func setupTableView() {
