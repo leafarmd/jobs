@@ -29,8 +29,8 @@ final class CheckInPresenter {
         let coupon = (model.cupons?.first ?? 0) ?? 0
         let discount = Double(coupon)/100
         view?.setPrice(price.ptBRCurrency)
-        view?.setDiscount((price * -discount).ptBRCurrency)
-        view?.setTotal((price - discount).ptBRCurrency)
+        view?.setDiscount((price * discount).ptBRCurrency)
+        view?.setTotal((price - (price * discount)).ptBRCurrency)
         view?.setTitle(model.title)
     }
     
