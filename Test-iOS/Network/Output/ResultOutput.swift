@@ -15,8 +15,8 @@ struct EventsOutput: Decodable {
     let image: String
     let description: String
     let date: Int
-    let cupons: [CuponOutput]
-    let people: [PeopleOutput]
+    let cupons: [CuponOutput]?
+    let people: [PeopleOutput]?
 }
 
 enum  LocationOutput: Decodable {

@@ -32,6 +32,19 @@
 		53B4F2E022ED6E780028B29F /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F2DE22ED6E780028B29F /* EventsTableViewCell.xib */; };
 		53B4F2E222ED70CC0028B29F /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2E122ED70CC0028B29F /* EventModel.swift */; };
 		53B4F2E422EDE4360028B29F /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2E322EDE4360028B29F /* UIImageViewExtensions.swift */; };
+		53B4F2E722EDF0D40028B29F /* EventDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2E622EDF0D40028B29F /* EventDetailProtocols.swift */; };
+		53B4F2E922EDF12E0028B29F /* EventDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2E822EDF12E0028B29F /* EventDetailService.swift */; };
+		53B4F2EB22EDF3AF0028B29F /* EventDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2EA22EDF3AF0028B29F /* EventDetailPresenter.swift */; };
+		53B4F2ED22EDF7D30028B29F /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2EC22EDF7D30028B29F /* EventDetailModel.swift */; };
+		53B4F2F122EE0BF30028B29F /* EventDetailViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2F022EE0BF30028B29F /* EventDetailViewcontroller.swift */; };
+		53B4F2F522EE0F020028B29F /* DetailMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2F322EE0F020028B29F /* DetailMainInfoTableViewCell.swift */; };
+		53B4F2F622EE0F020028B29F /* DetailMainInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F2F422EE0F020028B29F /* DetailMainInfoTableViewCell.xib */; };
+		53B4F2F822EE1C440028B29F /* EventDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2F722EE1C440028B29F /* EventDetailRouter.swift */; };
+		53B4F2FB22EE672A0028B29F /* DetailMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2F922EE672A0028B29F /* DetailMapTableViewCell.swift */; };
+		53B4F2FC22EE672A0028B29F /* DetailMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F2FA22EE672A0028B29F /* DetailMapTableViewCell.xib */; };
+		53B4F2FF22EE760A0028B29F /* CheckInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F2FD22EE760A0028B29F /* CheckInTableViewCell.swift */; };
+		53B4F30022EE760A0028B29F /* CheckInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53B4F2FE22EE760A0028B29F /* CheckInTableViewCell.xib */; };
+		53B4F30322EE7A9F0028B29F /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B4F30222EE7A9F0028B29F /* DoubleExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +87,19 @@
 		53B4F2DE22ED6E780028B29F /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		53B4F2E122ED70CC0028B29F /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		53B4F2E322EDE4360028B29F /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		53B4F2E622EDF0D40028B29F /* EventDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailProtocols.swift; sourceTree = "<group>"; };
+		53B4F2E822EDF12E0028B29F /* EventDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailService.swift; sourceTree = "<group>"; };
+		53B4F2EA22EDF3AF0028B29F /* EventDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPresenter.swift; sourceTree = "<group>"; };
+		53B4F2EC22EDF7D30028B29F /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
+		53B4F2F022EE0BF30028B29F /* EventDetailViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewcontroller.swift; sourceTree = "<group>"; };
+		53B4F2F322EE0F020028B29F /* DetailMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMainInfoTableViewCell.swift; sourceTree = "<group>"; };
+		53B4F2F422EE0F020028B29F /* DetailMainInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMainInfoTableViewCell.xib; sourceTree = "<group>"; };
+		53B4F2F722EE1C440028B29F /* EventDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailRouter.swift; sourceTree = "<group>"; };
+		53B4F2F922EE672A0028B29F /* DetailMapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapTableViewCell.swift; sourceTree = "<group>"; };
+		53B4F2FA22EE672A0028B29F /* DetailMapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMapTableViewCell.xib; sourceTree = "<group>"; };
+		53B4F2FD22EE760A0028B29F /* CheckInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTableViewCell.swift; sourceTree = "<group>"; };
+		53B4F2FE22EE760A0028B29F /* CheckInTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInTableViewCell.xib; sourceTree = "<group>"; };
+		53B4F30222EE7A9F0028B29F /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +214,7 @@
 			children = (
 				53B4F2CD22ECABA60028B29F /* DateExtensions.swift */,
 				53B4F2E322EDE4360028B29F /* UIImageViewExtensions.swift */,
+				53B4F30222EE7A9F0028B29F /* DoubleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +232,8 @@
 		53B4F2D022ECF8060028B29F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				53B4F30122EE79950028B29F /* CheckIn */,
+				53B4F2E522EDF07E0028B29F /* EventDetail */,
 				53B4F2D122ECF8730028B29F /* Events */,
 			);
 			path = Features;
@@ -231,6 +260,40 @@
 				53B4F2DE22ED6E780028B29F /* EventsTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		53B4F2E522EDF07E0028B29F /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				53B4F2F222EE0EB50028B29F /* Cells */,
+				53B4F2E622EDF0D40028B29F /* EventDetailProtocols.swift */,
+				53B4F2E822EDF12E0028B29F /* EventDetailService.swift */,
+				53B4F2EA22EDF3AF0028B29F /* EventDetailPresenter.swift */,
+				53B4F2EC22EDF7D30028B29F /* EventDetailModel.swift */,
+				53B4F2F022EE0BF30028B29F /* EventDetailViewcontroller.swift */,
+				53B4F2F722EE1C440028B29F /* EventDetailRouter.swift */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		53B4F2F222EE0EB50028B29F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53B4F2F322EE0F020028B29F /* DetailMainInfoTableViewCell.swift */,
+				53B4F2F422EE0F020028B29F /* DetailMainInfoTableViewCell.xib */,
+				53B4F2F922EE672A0028B29F /* DetailMapTableViewCell.swift */,
+				53B4F2FA22EE672A0028B29F /* DetailMapTableViewCell.xib */,
+				53B4F2FD22EE760A0028B29F /* CheckInTableViewCell.swift */,
+				53B4F2FE22EE760A0028B29F /* CheckInTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		53B4F30122EE79950028B29F /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +379,11 @@
 			files = (
 				53B4F2E022ED6E780028B29F /* EventsTableViewCell.xib in Resources */,
 				53A2085C22EB636F00878F68 /* LaunchScreen.storyboard in Resources */,
+				53B4F2F622EE0F020028B29F /* DetailMainInfoTableViewCell.xib in Resources */,
 				53A2085922EB636F00878F68 /* Assets.xcassets in Resources */,
 				53B4F2B122EC42410028B29F /* TableViewController.xib in Resources */,
+				53B4F30022EE760A0028B29F /* CheckInTableViewCell.xib in Resources */,
+				53B4F2FC22EE672A0028B29F /* DetailMapTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,20 +406,30 @@
 				53B4F29C22EB65C50028B29F /* ResultOutput.swift in Sources */,
 				53B4F2B022EC42410028B29F /* TableViewController.swift in Sources */,
 				53B4F2A722EC3DCF0028B29F /* TableViewDataSoruce.swift in Sources */,
+				53B4F2F822EE1C440028B29F /* EventDetailRouter.swift in Sources */,
 				53B4F2CE22ECABA60028B29F /* DateExtensions.swift in Sources */,
 				53B4F2DB22ED6B630028B29F /* EventsRouter.swift in Sources */,
 				53B4F2D522ECF9CF0028B29F /* EventsService.swift in Sources */,
 				53A2085222EB636E00878F68 /* AppDelegate.swift in Sources */,
+				53B4F2F522EE0F020028B29F /* DetailMainInfoTableViewCell.swift in Sources */,
+				53B4F2E722EDF0D40028B29F /* EventDetailProtocols.swift in Sources */,
 				53B4F2A222EB6AC00028B29F /* API.swift in Sources */,
+				53B4F2E922EDF12E0028B29F /* EventDetailService.swift in Sources */,
 				53B4F2D922ED69080028B29F /* EventsViewController.swift in Sources */,
+				53B4F2FF22EE760A0028B29F /* CheckInTableViewCell.swift in Sources */,
 				53B4F2C922ECA55B0028B29F /* LoadingHandler.swift in Sources */,
 				53B4F2A922EC3E010028B29F /* TableViewModel.swift in Sources */,
+				53B4F2F122EE0BF30028B29F /* EventDetailViewcontroller.swift in Sources */,
 				53B4F2D722ECFBBD0028B29F /* EventsPresenter.swift in Sources */,
 				53B4F2A422EC3D5F0028B29F /* CellConfigurator.swift in Sources */,
+				53B4F2EB22EDF3AF0028B29F /* EventDetailPresenter.swift in Sources */,
+				53B4F30322EE7A9F0028B29F /* DoubleExtensions.swift in Sources */,
 				53B4F2D322ECF8930028B29F /* EventsProtocols.swift in Sources */,
 				53B4F2DF22ED6E780028B29F /* EventsTableViewCell.swift in Sources */,
+				53B4F2FB22EE672A0028B29F /* DetailMapTableViewCell.swift in Sources */,
 				53B4F2E222ED70CC0028B29F /* EventModel.swift in Sources */,
 				53B4F2E422EDE4360028B29F /* UIImageViewExtensions.swift in Sources */,
+				53B4F2ED22EDF7D30028B29F /* EventDetailModel.swift in Sources */,
 				53B4F29E22EB66D10028B29F /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

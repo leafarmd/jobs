@@ -11,8 +11,17 @@ import Foundation
 struct EventModel {
     let id: String
     let title: String
-    let Description: String
+    let description: String
     let date: Date
     let price: Double
     let image: String
+    
+    init(output: EventsOutput) {
+        self.id = output.id
+        self.title = output.title
+        self.description = output.description
+        self.date = Date(timeIntervalSince1970: TimeInterval(output.date))
+        self.price = output.price
+        self.image = output.image
+    }
 }

@@ -16,6 +16,7 @@ protocol EventsView: class {
 
 protocol EventsRoutering {
     func makeViewController() -> UIViewController
+    func navigateToEventDetail(with id: String)
 }
 
 protocol EventsServiceInput: class {

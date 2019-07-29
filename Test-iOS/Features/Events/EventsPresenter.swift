@@ -10,11 +10,14 @@ import Foundation
 
 final class EventsPresenter {
     
+    var models: [EventModel] = []
     weak var view: EventsView?
     private let service: EventsServiceInput
+    private let router: EventsRoutering
     
-    init(service: EventsServiceInput) {
+    init(service: EventsServiceInput, router: EventsRoutering) {
         self.service = service
+        self.router = router
     }
     
     func attachView(_ view: EventsView) {
@@ -23,6 +26,10 @@ final class EventsPresenter {
         view.showLoadingFeedback()
         service.fetchEvents()
     }
+    
+    func eventSelected(_ index: Int) {
+        router.navigateToEventDetail(with: models[index].id)
+    }
 }
 
 extension EventsPresenter: EventsServiceOutput {
@@ -30,13 +37,8 @@ extension EventsPresenter: EventsServiceOutput {
     func fetchEventsSucceeded(output: [EventsOutput]) {
         view?.hideLoadingFeedback()
         
-        var models: [EventModel] = []
-        output.forEach { models.append(EventModel(id: $0.id,
-                                                  title: $0.title,
-                                                 Description: $0.description,
-                                                 date: Date(timeIntervalSince1970: TimeInterval($0.date / 1000)),
-                                                 price: $0.price,
-                                                 image: $0.image)) }
+        
+        output.forEach { models.append(EventModel(output: $0)) }
         view?.reloadData(with: models)
     }
     

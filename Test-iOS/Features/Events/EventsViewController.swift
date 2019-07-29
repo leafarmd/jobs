@@ -6,6 +6,8 @@
 //  Copyright © 2019 Rafael Damasceno. All rights reserved.
 //
 
+import UIKit
+
 final class EventsViewController: TableViewController {
     
     private let presenter: EventsPresenter
@@ -19,6 +21,7 @@ final class EventsViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
         presenter.attachView(self)
     }
 }
@@ -36,5 +39,11 @@ extension EventsViewController: EventsView {
     func reloadData(with model: [EventModel]) {
         model.forEach { dataSoruce.model.items.append(EventsCellConfig(item: $0)) }
         tableView.reloadData()
+    }
+}
+
+extension EventsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.eventSelected(indexPath.row)
     }
 }

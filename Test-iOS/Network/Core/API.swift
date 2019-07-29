@@ -14,10 +14,12 @@ final class API {
     static func request<T: Decodable>(from endpoint: APIEndpoint,
                                       type: T.Type,
                                       method: HttpMethod = .GET,
+                                      data: Data? = nil,
                                       completion: @escaping CompletionCallback<T>) {
         request(from: endpoint.url,
                 type: type,
                 method: method,
+                data: data,
                 completion: completion)
         
     }
@@ -25,6 +27,7 @@ final class API {
     private static func request<T: Decodable>(from endpoint: String,
                                               type: T.Type,
                                               method: HttpMethod,
+                                              data: Data?,
                                               completion: @escaping CompletionCallback<T>) {
         
         let configuration = URLSessionConfiguration.default
@@ -41,6 +44,11 @@ final class API {
         
         request.httpMethod = method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if let data = data {
+            request.httpBody = data
+        }
+        
         
         session.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
