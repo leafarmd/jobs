@@ -16,6 +16,7 @@ protocol EventDetailView: class {
 
 protocol EventDetailRoutering: class {
     func makeViewController() -> UIViewController
+    func navigateToCheckIn(model: EventDetailModel)
 }
 
 protocol EventDetailServiceInput: class {

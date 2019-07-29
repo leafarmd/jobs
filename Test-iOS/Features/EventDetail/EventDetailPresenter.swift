@@ -12,9 +12,12 @@ final class EventDetailPresenter {
     
     weak var view: EventDetailView?
     private let service: EventDetailServiceInput
+    private let router: EventDetailRoutering
     
-    init(service: EventDetailServiceInput) {
+    
+    init(service: EventDetailServiceInput, router: EventDetailRoutering) {
         self.service = service
+        self.router = router
     }
     
     func attachView(_ view: EventDetailView) {
@@ -37,7 +40,7 @@ extension EventDetailPresenter: EventDetailServiceOutput {
     }
     
     func presentCheckIn(with model: EventDetailModel) {
-        
+        router.navigateToCheckIn(model: model)
     }
 }
 

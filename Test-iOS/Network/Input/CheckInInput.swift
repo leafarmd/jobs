@@ -1,0 +1,15 @@
+//
+//  CheckInInput.swift
+//  Test-iOS
+//
+//  Created by Rafael Damasceno on 29/07/19.
+//  Copyright © 2019 Rafael Damasceno. All rights reserved.
+//
+
+import Foundation
+
+struct CheckInInput: Encodable {
+    let eventId: String
+    let name: String
+    let email:String
+}
