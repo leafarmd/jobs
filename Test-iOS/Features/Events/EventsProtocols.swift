@@ -12,6 +12,7 @@ protocol EventsView: class {
     func showLoadingFeedback()
     func hideLoadingFeedback()
     func reloadData(with model: [EventModel])
+    func showMessage(title: String, message: String)
 }
 
 protocol EventsRoutering {

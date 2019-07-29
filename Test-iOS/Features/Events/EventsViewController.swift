@@ -40,6 +40,10 @@ extension EventsViewController: EventsView {
         model.forEach { dataSoruce.model.items.append(EventsCellConfig(item: $0)) }
         tableView.reloadData()
     }
+    
+    func showMessage(title: String, message: String) {
+        showAlert(title: title, message: message)
+    }
 }
 
 extension EventsViewController: UITableViewDelegate {

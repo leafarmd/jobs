@@ -44,5 +44,6 @@ extension EventsPresenter: EventsServiceOutput {
     
     func fetchEventsFailed(error message: String) {
         view?.hideLoadingFeedback()
+        view?.showMessage(title: "Error", message: message)
     }
 }
