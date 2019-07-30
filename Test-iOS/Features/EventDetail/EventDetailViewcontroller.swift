@@ -45,6 +45,10 @@ extension EventDetailViewController: EventDetailView {
         
         tableView.reloadData()
     }
+    
+    func presentMessage(title: String, message: String) {
+        showAlert(title: title, message: message)
+    }
 }
 
 extension EventDetailViewController: CheckInDelegate {

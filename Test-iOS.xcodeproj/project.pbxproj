@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				53A2086822EB637000878F68 /* Info.plist */,
-				53F3F67322EFA33900C4BC7A /* EventsRouterTests.swift */,
 				53F3F67222EFA33900C4BC7A /* Test-iOSTests-Bridging-Header.h */,
+				53F3F67322EFA33900C4BC7A /* EventsRouterTests.swift */,
 				53F3F67522EFA45C00C4BC7A /* EventsPresenterTests.swift */,
 				53F3F67722EFDD8800C4BC7A /* EventsDetailRouterTests.swift */,
 				53F3F67922EFE34D00C4BC7A /* CheckinRouterTests.swift */,

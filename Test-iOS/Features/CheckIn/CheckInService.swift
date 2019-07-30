@@ -28,7 +28,9 @@ final class CheckInService: CheckInServiceInput {
                 }
                 
             }
-        } catch { }
+        } catch {
+            output?.checkInFailed(error: "check in failed")
+        }
         
     }
 }

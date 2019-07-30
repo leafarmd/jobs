@@ -37,6 +37,7 @@ extension EventDetailPresenter: EventDetailServiceOutput {
     
     func fetchEventDetailFailed(error message: String) {
         view?.hideLoadingFeedback()
+        view?.presentMessage(title: "Error", message: message)
     }
     
     func presentCheckIn(with model: EventDetailModel) {
