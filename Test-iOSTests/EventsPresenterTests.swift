@@ -26,6 +26,7 @@ final class EventsPresenterTests: QuickSpec {
                 service = EventsServiceSpy()
                 router = EventsRouterSpy()
                 presenter = EventsPresenter(service: service!, router: router!)
+                service?.output = presenter!
                 presenter?.attachView(view!)
             }
             
@@ -47,16 +48,16 @@ final class EventsPresenterTests: QuickSpec {
             describe("when the service return with success") {
                 
                 beforeEach {
-                    service?.output?.fetchEventsSucceeded(output: EventsOutput.dummy)
+                     service?.output?.fetchEventsSucceeded(output: EventsOutput.dummy)
                 }
                 
                 it("will stop loading feedback") {
                     expect(view?.hideLoadingFeedbackCalled) == true
                 }
                 
-                it("will navigate to news list") {
-                    expect(router?.navigateToEventDetailCalled) == true
-                    expect(router?.idPassed) == "1"
+                it("will reoload data") {
+                    expect(view?.reoladDataCalled) == true
+                    expect(view?.modelPassed?.count) == 1
                 }
             }
             
@@ -84,6 +85,7 @@ final class EventsPresenterTests: QuickSpec {
 private class EventsViewSpy: EventsView {
     var showLoadingFeedbackCalled: Bool?
     var hideLoadingFeedbackCalled: Bool?
+    var reoladDataCalled: Bool?
     var modelPassed: [EventModel]?
     var showMessageCalled:Bool?
     var titlePassed: String?
@@ -98,6 +100,7 @@ private class EventsViewSpy: EventsView {
     }
     
     func reloadData(with model: [EventModel]) {
+        reoladDataCalled = true
         modelPassed = model
     }
     
