@@ -61,6 +61,18 @@ final class EventsPresenterTests: QuickSpec {
                 }
             }
             
+            describe("when an event is selected") {
+                beforeEach {
+                    service?.output?.fetchEventsSucceeded(output: EventsOutput.dummy)
+                    presenter?.eventSelected(0)
+                }
+                
+                it("will call router navigation") {
+                    expect(router?.navigateToEventDetailCalled) == true
+                    expect(router?.idPassed) == "1"
+                }
+            }
+            
             describe("when the service return with error") {
                 
                 beforeEach {
